@@ -99,9 +99,15 @@ class TriangulationPlayer:
     
         return fig, _animate
 
+    def get_function(self, xlim=None, ylim=None, interval=1000):
+
+        fig, anim_fn = self._prepare_animation(self.triangulation.points, self.triangulation.snapshots, xlim, ylim)
+        return FuncAnimation(fig, anim_fn, frames=len(self.triangulation.snapshots), interval=interval)
+
     def play_interactive(self, xlim=None, ylim=None, interval=1000):
         # TODO: the player uses only the last triangulation
         fig, anim_fn = self._prepare_animation(self.triangulation.points, self.triangulation.snapshots, xlim, ylim)
+
         return Player(fig, anim_fn, maxi=len(self.triangulation.snapshots), interval=interval)
 
     

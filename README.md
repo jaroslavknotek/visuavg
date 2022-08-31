@@ -20,6 +20,10 @@ which opens your default browser and select `kdtree-visualization` notebook. Oth
 
 Code is not intended to run outside of the notebook. 
 
+# Result
+
+![](triang.gif)
+
 # Code Structure
 
 - `kdtree.py` - K-d tree and its utils. Algorithm itself originates from wikipedia but was adapted.
